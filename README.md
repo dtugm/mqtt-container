@@ -29,4 +29,10 @@ To change the credential:
 ./scripts/create_credential.sh
 
 # You will be re-prompted to fill the credentials.
+# ...
+
+# Restart the container by simply running
+sudo docker container stop mqtt-mqtt-1  # adjust the name if needed
+sudo docker container rm mqtt-mqtt-1    # adjust the name if needed
+sudo docker compose up -d
 ```
