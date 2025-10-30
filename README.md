@@ -17,6 +17,9 @@ git clone https://github.com/Bengkel-Inovasi/mqtt-container.git
 # You will be prompted to fill:
 # Enter username:
 # Enter password:
+
+# Run the docker
+sudo docker compose up -d
 ```
 
 To change the credential:
