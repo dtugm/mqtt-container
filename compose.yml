@@ -1,0 +1,15 @@
+name: "mqtt"
+services:
+  mqtt:
+    image: eclipse-mosquitto:latest
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+      # - "8883:8883"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+      # - ./mosquitto/certs:/mosquitto/certs
+    user: "1883:1883"
