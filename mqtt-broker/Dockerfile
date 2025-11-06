@@ -13,7 +13,7 @@ RUN mkdir -p /mosquitto/config \
     && mkdir -p /mosquitto/log
 
 # Copy the mosquitto configuration file
-COPY mosquitto.conf /mosquitto/config/mosquitto.conf
+COPY mqtt-broker/mosquitto.conf /mosquitto/config/mosquitto.conf
 
 # Copy the entrypoint script
 COPY mqtt-broker/docker-entrypoint.sh /docker-entrypoint.sh
