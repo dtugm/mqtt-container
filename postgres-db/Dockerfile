@@ -1,7 +1,7 @@
 FROM timescale/timescaledb-ha:pg16.10-ts2.23.0
 
 # Copy initialization script
-COPY init.sql /docker-entrypoint-initdb.d/init.sql
+COPY postgres-db/init.sql /docker-entrypoint-initdb.d/init.sql
 
 # Set default environment variables (will be overridden by Railway)
 ENV POSTGRES_USER=bi-digital-twin

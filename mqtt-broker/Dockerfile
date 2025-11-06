@@ -16,7 +16,7 @@ RUN mkdir -p /mosquitto/config \
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
 
 # Copy the entrypoint script
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY mqtt-broker/docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 # Expose MQTT and WebSocket ports
