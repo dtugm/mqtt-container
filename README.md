@@ -1,28 +1,36 @@
 # **mqtt-container**
 
-## **Instruction**
+## **A. Instruction**
 
-Run the following command:
+### **1. Initiate MQTT Credential**
 
 ```bash
-# clone this repository
-git clone https://github.com/Bengkel-Inovasi/mqtt-container.git
+# adjust <USERNAME> and <PASSWORD> accordingly
+./scripts/mqtt_setup.sh -u <USERNAME> -p <PASSWORD>
+```
 
-# initiate MQTT volume with credential
-./setup.sh -u YOUR_USERNAME -p YOUR_PASSWORD # change accordingly
+### **2. Fill the Environment Variables on `compose.yml`**
 
-# run the docker
+There are some private variables need to be filled in on `compose.yml`:
+
+- **TOKEN_PRIVATE_KEY**
+- **DB_PASSWORD**
+- **MQTT_USERNAME**
+- **MQTT_PASSWORD**
+- **POSTGRES_PASSWORD**
+
+### **3. Compose the Docker Container**
+
+```bash
 sudo docker compose up -d
 ```
 
-To add another credentials, re-run the script with `-u` and `-p` flag.
-To cleanup:
+### **4. Accessing the API Documentation**
+
+Open `HOSTNAME:8080/swagger` to access the API documentation.
+
+### **5. Clearing the Container**
 
 ```bash
-# stop and delete the container
-sudo docker container stop mqtt-mqtt-1  # adjust the name if needed
-sudo docker container rm mqtt-mqtt-1    # adjust the name if needed
-
-# cleanup
-./cleanup.sh
+sudo docker compose down -v
 ```
