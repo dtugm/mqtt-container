@@ -1,0 +1,9 @@
+# Ignore nothing - include all files in postgres-db directory
+# This ensures init.sql is included
+
+# Only ignore common temp files
+*.swp
+*.swo
+*~
+.DS_Store
+

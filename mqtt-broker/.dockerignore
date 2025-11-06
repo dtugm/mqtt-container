@@ -1,0 +1,9 @@
+# Ignore nothing - include all files in mqtt-broker directory
+# This ensures docker-entrypoint.sh and mosquitto.conf are included
+
+# Only ignore common temp files
+*.swp
+*.swo
+*~
+.DS_Store
+

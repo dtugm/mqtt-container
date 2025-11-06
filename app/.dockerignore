@@ -1,0 +1,8 @@
+# Ignore nothing - include all files in app directory
+
+# Only ignore common temp files
+*.swp
+*.swo
+*~
+.DS_Store
+
