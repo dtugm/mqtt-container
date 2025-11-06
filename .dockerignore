@@ -1,0 +1,45 @@
+# Git files
+.git
+.gitignore
+
+# Docker files
+compose.yml
+compose.dockerfile.yml
+Dockerfile
+.dockerignore
+
+# Scripts (not needed in container)
+setup.sh
+cleanup.sh
+
+# Documentation
+README.md
+DEPLOYMENT.md
+RAILWAY_QUICKSTART.md
+ENV_SETUP.md
+SECURITY_CHECKLIST.md
+
+# Test files
+test-connection.js
+package.json
+package-lock.json
+node_modules/
+
+# Environment files
+.env
+.env.example
+
+# Local mosquitto directories (created at runtime)
+mosquitto/
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+

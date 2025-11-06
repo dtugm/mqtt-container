@@ -1,1 +1,30 @@
-mosquitto
+# Environment variables
+.env
+*.env
+!.env.example
+
+# Local mosquitto directories
+mosquitto/
+
+# Service directories - local data
+mqtt-broker/data/
+mqtt-broker/log/
+postgres-db/data/
+app/logs/
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
